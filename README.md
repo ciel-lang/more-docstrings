@@ -32,6 +32,7 @@ https://lispcookbook.github.io/cl-cookbook/iteration.html
 
 - `mapcar`, `maphash`
 - `sort`
+- `defun`, `defmacro`
 
 and that's it. To be continued.
 
