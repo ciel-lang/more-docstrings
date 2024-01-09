@@ -3,7 +3,7 @@ Augment the docstring of built-in functions and macros with more explanations an
 
 Let's see how useful it is for newcomers.
 
-This is part of CIEL (CIEL Is an Extended Lisp).
+This is part of [CIEL](https://github.com/ciel-lang/CIEL/) (CIEL Is an Extended Lisp).
 
 A few functions are done:
 
@@ -39,3 +39,7 @@ and that's it. To be continued.
 A gotcha though:
 
 - we are modifying the symbols in the :cl package, there is currently no way to "undo" these additions.
+
+## Installation
+
+This library is on [Ultralisp](https://ultralisp.org/github).
