@@ -165,5 +165,61 @@ https://gigamonkeys.com/book/macros-standard-control-constructs.html
 https://www.youtube.com/watch?v=ygKXeLKhiTI Little bits of Lisp video
 ")
 
+;;; defclass
+(docstring-append 'defclass "The macro defclass defines a new named class. It returns the new class object as its result.
+
+Example:
+
+    (defclass living-being () ())
+
+    (defclass person (living-being)
+      ((name
+        :initarg :name
+        :initform \"\"
+        :accessor name)
+       (lisper
+        :initarg :lisper
+        :initform nil
+        :accessor lisper
+        :documentation \"Set to non-nil if this person fancies Lisp.\")))
+
+Slots are unbound by default, here we prefer them to be the empty string and nil.
+
+An :accessor creates a generic method. You can have the same accessor name in different classes.
+
+Create an instance of that class with MAKE-INSTANCE:
+
+    (make-instance 'person :name \"Alice\" :lisper t)
+
+Define how to pretty-print an object with PRINT-OBJECT.
+
+After we change a class definition (slots are modified, added or removed), we can control how an object is updated with UPDATE-INSTANCE-FOR-REDEFINED-CLASS.
+
+Read more:
+https://lispcookbook.github.io/cl-cookbook/clos.html
+https://cl-community-spec.github.io/pages/defclass.html
+")
 
 ;;; to be continued.
+
+(docstring-append 'print-object "The generic function print-object writes the printed representation of object to stream. The function print-object is called by the Lisp printer; it should not be called by the user.
+
+Example:
+
+   (defmethod print-object ((obj person) stream)
+      (print-unreadable-object (obj stream :type t :identity t)
+        (with-slots (name lisper) obj
+          (format stream \"~a, lisper: ~a\" name lisper))))
+
+   (make-instance 'person :name \"Alice\")
+   ;; =>
+   #<PERSON Alice, lisper: NIL {1007277633}>
+   (1) (2)                     (3)
+   1 tells the reader that this object can't be read back in
+   2 is the object type
+   3 is the object identity (address).
+
+Read more:
+https://cl-community-spec.github.io/pages/print_002dobject.html
+https://lispcookbook.github.io/cl-cookbook/clos.html#pretty-printing
+")
