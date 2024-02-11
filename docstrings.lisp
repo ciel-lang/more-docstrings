@@ -223,3 +223,20 @@ Read more:
 https://cl-community-spec.github.io/pages/print_002dobject.html
 https://lispcookbook.github.io/cl-cookbook/clos.html#pretty-printing
 ")
+
+(docstring-append 'defstruct "
+
+Example:
+
+  (defstruct person
+    name age)
+
+Creates the `make-person' constructor function, the `person-p' predicate as well as the `person-name' and `person-age' setf-able functions:
+
+   (person-name (make-person :name \"lisper\"))
+   ;; => \"lisper\"
+
+See more:
+
+- https://lispcookbook.github.io/cl-cookbook/data-structures.html#structures
+- https://cl-community-spec.github.io/pages/defstruct.html")

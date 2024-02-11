@@ -30,10 +30,13 @@ For many examples, see the CL Cookbook:
 https://lispcookbook.github.io/cl-cookbook/iteration.html
 ```
 
-- `mapcar`, `maphash`
+- `mapcar`, `mapcan`
+- `maphash`
 - `sort`
+- `loop`
 - `defun`, `defmacro`
 - `defclass`, `print-object`
+- `defstruct`
 
 and that's it. To be continued.
 
