@@ -37,6 +37,7 @@ https://lispcookbook.github.io/cl-cookbook/iteration.html
 - `defun`, `defmacro`
 - `defclass`, `defgeneric`, `print-object`
 - `defstruct`
+- `find`
 
 and that's it. To be continued.
 
