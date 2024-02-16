@@ -236,7 +236,42 @@ Creates the `make-person' constructor function, the `person-p' predicate as well
    (person-name (make-person :name \"lisper\"))
    ;; => \"lisper\"
 
-See more:
+Read more:
 
 - https://lispcookbook.github.io/cl-cookbook/data-structures.html#structures
 - https://cl-community-spec.github.io/pages/defstruct.html")
+
+(docstring-append 'defgeneric "
+
+A generic function is a lisp function which is associated
+with a set of methods and dispatches them when it's invoked. All
+the methods with the same function name belong to the same generic
+function.
+
+The `defgeneric` form defines the generic function. If we write a
+`defmethod` without a corresponding `defgeneric`, a generic function
+is automatically created.
+
+Example:
+
+  (defgeneric greet (obj)
+    (:documentation \"says hi\")
+    (:method (obj)
+      (format t \"Hi\")))
+
+")
+
+(docstring-append 'find "
+Search for ITEM in SEQUENCE, return ITEM.
+
+Example:
+
+  (find 20 '(10 20 30)) ;; => 20
+  (find \"foo\" '(\"abc\" \"foo\") :test #'string-equal) ;; => \"foo\"
+
+See also: `find-if', `position', `search', `index', `elt'…
+
+Read more:
+
+- https://cl-community-spec.github.io/pages/find.html
+- https://lispcookbook.github.io/cl-cookbook/data-structures.html")
