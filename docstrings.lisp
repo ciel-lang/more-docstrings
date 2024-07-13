@@ -275,3 +275,18 @@ Read more:
 
 - https://cl-community-spec.github.io/pages/find.html
 - https://lispcookbook.github.io/cl-cookbook/data-structures.html")
+
+(docstring-append 'with-open-file "
+Example:
+
+write to a file:
+
+(with-open-file (f \"/path/to/file.txt\" :direction :output
+                                     :if-exists :supersede
+                                     :if-does-not-exist :create)
+    (write-sequence \"hello file\" f))
+
+This binds a stream to the `f' variable and we write content to it.
+
+You can read files with :direction :input as well as UIOP: uiop:read-file-string, uiop:read-file-lines etc.
+")
