@@ -289,4 +289,21 @@ write to a file:
 This binds a stream to the `f' variable and we write content to it.
 
 You can read files with :direction :input as well as UIOP: uiop:read-file-string, uiop:read-file-lines etc.
+
+Read more:
+
+- https://lispcookbook.github.io/cl-cookbook/files.html
+- https://cl-community-spec.github.io/pages/with_002dopen_002dfile.html
 ")
+
+(docstring-append 'round "
+
+See also:
+
+- `fround', that returns the rounded value as a float
+- `ceiling', `floor' and `truncate' (and their f… equivalent).
+
+Read more:
+
+- https://lispcookbook.github.io/cl-cookbook/numbers.html
+- https://cl-community-spec.github.io/pages/floor.html")

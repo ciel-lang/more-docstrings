@@ -38,6 +38,8 @@ https://lispcookbook.github.io/cl-cookbook/iteration.html
 - `defclass`, `defgeneric`, `print-object`
 - `defstruct`
 - `find`
+- `with-open-file`
+- `round`
 
 and that's it. To be continued.
 
