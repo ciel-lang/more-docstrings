@@ -41,6 +41,10 @@ https://lispcookbook.github.io/cl-cookbook/iteration.html
 - `with-open-file`
 - `round`
 
+and variables:
+
+- `*default-pathname-defaults*`
+
 and that's it. To be continued.
 
 A gotcha though:

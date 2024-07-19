@@ -52,6 +52,17 @@ case.
 ;;; Now use it.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; Variables
+
+(docstring-append '*default-pathname-defaults* "
+
+An implementation-dependent pathname, typically in the working directory that was current when Common Lisp was started up.
+
+Read more:
+
+- https://cl-community-spec.github.io/pages/002adefault_002dpathname_002ddefaults_002a.html"
+                  'variable)
+
 ;;; mapcar
 (docstring-append 'mapcar "
 
